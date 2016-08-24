@@ -1,0 +1,133 @@
+.contact-us {
+  padding: 30px 20px 40px;
+  background-color: $yellow;
+  text-align: center;
+
+  h1 {
+    font-size: 5rem;
+    margin-bottom: 25px;
+
+    @media (max-width: $breakpoint-xs-max) {
+      font-size: 3.5rem;
+    }
+  }
+
+  p {
+    font-size: 2.6rem;
+
+    @media (max-width: $breakpoint-xs-max) {
+      font-size: 1.6rem;
+    }
+
+    a {
+      color: #000;
+      text-decoration: none;
+
+      &:focus,
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  form {
+    text-align: left;
+    margin: 40px 0;
+
+    label {
+      display: block;
+    }
+
+    .input-wrapper {
+      &:first-of-type {
+        padding-left: 80px;
+
+        @media (max-width: $breakpoint-xs-max) {
+          padding-left: 15px;
+        }
+      }
+
+      @media (min-width: $breakpoint-xs-max) and  (max-width: $breakpoint-md-max) {
+        text-align: center;
+        padding-left: 15px !important;
+        margin-bottom: 20px;
+      }
+
+      input {
+        display: inline-block;
+
+          &#company {
+            background: url('../images/input-company.png') no-repeat;
+            width: 302px;
+            height: 43px;
+            padding: 6px 10px;
+            border: none;
+            font-size: 1.8rem;
+
+            @media (max-width: $breakpoint-xs-max) {
+              width: 302px;
+            }
+
+            @media (min-width: $breakpoint-xs-max) and  (max-width: $breakpoint-md-max) {
+              background: url('../images/input-email.png') no-repeat;
+              width: 370px;
+            }
+          }
+
+          &#email {
+            background: url('../images/input-email.png') no-repeat;
+            width: 370px;
+            height: 43px;
+            padding: 6px 10px;
+            border: none;
+            font-size: 1.8rem;
+
+            @media (max-width: $breakpoint-xs-max) {
+              width: 302px;
+              background: url('../images/input-company.png') no-repeat;
+            }
+          }
+
+          &#phone {
+            background: url('../images/input-phone.png') no-repeat;
+            width: 302px;
+            height: 43px;
+            padding: 6px 10px;
+            border: none;
+            font-size: 1.8rem;
+
+            @media (min-width: $breakpoint-xs-max) and  (max-width: $breakpoint-md-max) {
+              background: url('../images/input-email.png') no-repeat;
+              width: 370px;
+            }
+          }
+        }
+    }
+
+    span {
+      display: block;
+
+      @media (max-width: $breakpoint-md-max) {
+        display: none;
+      }
+    }
+
+    .btn-send {
+      margin: 10px 72px 0 0;
+      float: right;
+
+      @media (max-width: $breakpoint-xs-max) {
+        margin: 20px 0 0;
+        display: block;
+        float: none;
+      }
+
+      @media (min-width: $breakpoint-xs-max) and  (max-width: $breakpoint-md-max) {
+        margin: 20px auto 0;
+        width: 105px;
+        float: none;
+        display: block;
+      }
+    }
+  }
+}

@@ -1,0 +1,75 @@
+.hero-carousel {
+  background: url('../images/carousel/background.jpg') no-repeat;
+  background-size: cover;
+
+  /* Carousel base class */
+  .carousel {
+    height: 618px;
+
+    @media (max-width: $breakpoint-xs-max) {
+      height: 200px;
+    }
+
+    @media (min-width: $breakpoint-xs-max) and  (max-width: $breakpoint-md-max) {
+      height: 520px;
+    }
+
+    .carousel-control {
+      background: transparent;
+      width: 5%;
+
+      .glyphicon-chevron-left,
+      .glyphicon-chevron-right {
+        background: url('../images/carousel/arrow.png') no-repeat;
+        width: 28px;
+        height: 16px;
+
+        &::before {
+          content: ' ';
+        }
+      }
+
+      .glyphicon-chevron-left {
+        transform: rotate(180deg);
+      }
+    }
+
+    .carousel-indicators {
+      li {
+        background: #000;
+        border-color: #000;
+
+        &.active {
+          background-color: #fff;
+          border: 2px solid #000;
+        }
+      }
+    }
+  }
+
+  /* Since positioning the image, we need to help out the caption */
+  .carousel-caption {
+    z-index: 10;
+  }
+
+  /* Declare heights because of positioning of img element */
+  .carousel .item {
+    height: 618px;
+
+    @media (max-width: $breakpoint-xs-max) {
+      height: 200px;
+    }
+
+    @media (min-width: $breakpoint-xs-max) and  (max-width: $breakpoint-md-max) {
+      height: 520px;
+    }
+  }
+
+  .carousel-inner > .item > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    height: auto;
+  }
+}

@@ -1,0 +1,188 @@
+/*
+ * HEADER
+ */
+
+ body {
+   padding-top: 0;
+   min-height: 2000px;
+   text-shadow: 0 0 1px rgba(51,51,51,0.2);
+
+   @media (min-width: $breakpoint-xs-max) and  (max-width: $breakpoint-md-max) {
+     padding-top: 20px;
+   }
+
+   @media (max-width: $breakpoint-xs-max) {
+     padding-top: 30px;
+   }
+ }
+
+.navbar-default {
+  background: url('../images/menu-bg.png') repeat-x top center;
+  min-height: 100px;
+  border-bottom: none;
+
+  @media (min-width: 1200px) {
+    .container {
+      width: 1150px !important;
+    }
+  }
+
+  @media (max-width: $breakpoint-xs-max) {
+      height: 50px;
+      min-height: auto;
+
+      .navbar-header {
+        height: 50px;
+      }
+  }
+
+  .navbar-brand {
+    margin-top: 25px;
+    padding: 0;
+    width: 539px;
+
+    @media (max-width: $breakpoint-xs-max) {
+        width: 220px;
+        margin: 15px;
+    }
+
+    @media all and (max-width: $breakpoint-md-max) and (min-width: $breakpoint-md-min) {
+        width: 400px;
+        margin: 30px;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .navbar-nav {
+    padding-top: 35px;
+
+    @media (max-width: $breakpoint-xs-max) {
+        padding-top: 10px;
+    }
+
+    li {
+      margin-left: 15px;
+
+      a {
+        font-size: 2.4rem;
+        padding: 0 0 12px;
+        text-align:center;
+        color: #000;
+        text-transform: uppercase;
+      }
+
+      &:first-of-type {
+        width: 226px;
+
+        a:focus,
+        a:hover,
+        a.active {
+          background: url('../images/menu-1-hover.png') no-repeat center bottom;
+        }
+      }
+
+      &:nth-of-type(2) {
+        width: 123px;
+
+        a:focus,
+        a:hover,
+        a.active {
+          background: url('../images/menu-2-hover.png') no-repeat center bottom;
+        }
+      }
+
+      &:nth-of-type(3) {
+        width: 86px;
+
+        a:focus,
+        a:hover,
+        a.active {
+          background: url('../images/menu-3-hover.png') no-repeat center bottom;
+        }
+      }
+    }
+  }
+}
+
+.navbar-scrolled {
+  background: url('../images/menu-bg-scrolled.png') repeat-x top center;
+
+  .navbar-brand {
+    margin-top: 25px;
+    width: 430px;
+
+    @media all and (max-width: $breakpoint-md-max) and (min-width: $breakpoint-md-min) {
+        width: 400px;
+        margin: 30px;
+    }
+  }
+
+  .navbar-nav {
+    padding-top: 28px;
+
+    li {
+
+      a {
+        padding-top: 3px;
+      }
+
+      &:first-of-type {
+        width: 238px;
+
+        a:focus,
+        a:hover,
+        a.active {
+          background: url('../images/menu-1-hover-2.png') no-repeat center top;
+        }
+      }
+
+      &:nth-of-type(2) {
+        width: 146px;
+
+        a:focus,
+        a:hover,
+        a.active {
+          background: url('../images/menu-2-hover-2.png') no-repeat center top;
+        }
+      }
+
+      &:nth-of-type(3) {
+        width: 109px;
+
+        a:focus,
+        a:hover,
+        a.active {
+          background: url('../images/menu-3-hover-2.png') no-repeat center top;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpoint-xs-max) {
+  .navbar-collapse {
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    background: #fff;
+    text-align: center;
+    border-bottom: 3px solid #d0d0d0;
+
+    li {
+      width: 100% !important;
+      margin-bottom: 10px;
+
+      a {
+        &:focus,
+        &:hover,
+        &.active {
+          background: none !important;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}

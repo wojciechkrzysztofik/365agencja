@@ -1,0 +1,20 @@
+// GUARRANTY / GROWTH
+
+.growth {
+  padding: 95px 0;
+
+  @media (max-width: $breakpoint-xs-max) {
+    padding: 35px 0;
+  }
+
+  .image-wrapper {
+    width: 70%;
+    max-width: 891px;
+    margin: auto;
+
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+}

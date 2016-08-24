@@ -1,0 +1,59 @@
+/*
+ * FOOTER
+ */
+.footer {
+  background: #000;
+  text-align: center;
+  padding: 40px 20px;
+  position: relative;
+
+  p {
+    color: #fff;
+
+    &:first-of-type {
+      font-size: 1.8rem;
+      font-weight: bold;
+      margin: 10px auto 5px;
+    }
+
+    &:nth-of-type(2) {
+      font-size: 1.6rem;
+      color: #9d9d9d;
+
+      @media (max-width: $breakpoint-xs-max) {
+        font-size: 1.2rem;
+      }
+    }
+
+    a {
+      color: #9d9d9d;
+      text-decoration: none;
+
+      &:focus,
+      &:hover {
+        text-decoration: underline;
+        color: #fff;
+      }
+    }
+  }
+
+  .up {
+    background: url('../images/up.png') no-repeat;
+    display: block;
+    width: 45px;
+    height: 92px;
+    position: absolute;
+    bottom: 68px;
+    right: 50px;
+    opacity: 0.6;
+
+    &:focus,
+    &:hover {
+      opacity: 1;
+    }
+
+    @media (max-width: $breakpoint-xs-max) {
+      display: none;
+    }
+  }
+}
