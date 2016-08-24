@@ -11,6 +11,9 @@ $yellow: #ffed00;
 
 
 // BREAKPOINTS
-$breakpoint-xs-max: 769px;
-$breakpoint-md-min: 770px;
+$breakpoint-xs-min: 399px;
+$breakpoint-xs-max: 767px;
+$breakpoint-sm-min: 768px;
+$breakpoint-sm-max: 992px;
+$breakpoint-md-min: 993px;
 $breakpoint-md-max: 1280px;
