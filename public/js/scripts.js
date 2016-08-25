@@ -11,6 +11,7 @@ $(function() {
       this.warrantyBtn = $('#btn-warranty');
       this.contactUsBtn = $('#btn-contact-us');
       this.contactBtn = $('.btn-contact');
+      this.submitMessageBtn = $('.btn-send');
 
       this.init = function() {
 
@@ -77,12 +78,58 @@ $(function() {
           this.setActiveMenuItem(this.contactUsBtn);
       });
 
-    }
-        LandingPage = new LandingPage.App();
-        LandingPage.init();
+      this.submitMessageBtn.on('click', function(e) {
+          e.preventDefault();
 
-        $(window).scroll(function() {
-          LandingPage.setMenuTheme();
+          var company = $('#company').val();
+          var email = $('#email').val();
+          var phone = $('#phone').val();
+
+          if(phone != '') {
+            phone = ' (' + phone + ')';
+          } else {
+            phone = '';
+          }
+
+          if(company != '' && email != '') {
+            window.location = 'mailto:' + email + '?subject=Wiadomość od: ' + company + phone + '&body=Twoje zapytanie.';
+          }
+      });
+
+      if($(window).width() > 1024) {
+        $('.circle .area').hover(
+          function() {
+            $('.circle img').attr('src', 'public/images/omnichannel/omnichannel-' + $(this).data('area') + '.png');
+          }, function() {
+            $('.circle img').attr('src', 'public/images/omnichannel/omnichannel-0.png');
+          }
+        );
+      } else {
+        $('.circle .area').on('click', function(e) {
+          e.preventDefault();
         });
+      }
+
+    }
+
+    LandingPage = new LandingPage.App();
+    LandingPage.init();
+
+    $(window).scroll(function() {
+      LandingPage.setMenuTheme();
+    });
+
+    // APPEAR JS
+    $('.animated').appear();
+
+    $(document.body).on('appear', '.animated', function(e, $affected) {
+        var element = $(this);
+        var animation = element.data('animation');
+        element.addClass( animation + " visible" );
+        element.removeClass('hiding');
+        if (element.hasClass('counter')) {
+            element.children('.value').countTo();
+        }
+    });
 
 });

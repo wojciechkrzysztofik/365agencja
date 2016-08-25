@@ -11,3 +11,13 @@
 .no-padding {
   padding: 0;
 }
+
+.mobile-hidden {
+  @media (max-width: 374px) {
+      display: none;
+  }
+}
+
+.hiding {
+  opacity: 0;
+}

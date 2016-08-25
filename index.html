@@ -27,7 +27,8 @@
 
     <!-- Latest compiled and minified Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Patrick+Hand" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Patrick+Hand&subset=latin-ext" rel="stylesheet">
+    <link href="public/css/animate.min.css" rel="stylesheet">
     <link href="public/css/styles.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -73,7 +74,6 @@
               <ol class="carousel-indicators">
                 <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
                 <li data-target="#myCarousel" data-slide-to="1"></li>
-                <li data-target="#myCarousel" data-slide-to="2"></li>
               </ol>
               <div class="carousel-inner" role="listbox">
                 <div class="item active">
@@ -81,9 +81,6 @@
                 </div>
                 <div class="item">
                   <img class="second-slide" src="public/images/carousel/slide-2.png" alt="">
-                </div>
-                <div class="item">
-                  <img class="third-slide" src="public/images/carousel/slide-3.png" alt="">
                 </div>
               </div>
               <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
@@ -104,41 +101,54 @@
           <h1>Wszechkanałowa siła</h1>
 
           <div class="circle">
-            <img src="public/images/omnichannel/omnichannel-0.png" alt="">
+            <img src="public/images/omnichannel/omnichannel-0.png" alt="" usemap="#circle" />
+            <map name="circle" id="circle">
+                <area class="area" data-area="1" alt="" title="" href="#1" shape="poly" coords="616,322,629,392,755,412,735,267" />
+                <area class="area" data-area="2" alt="" title="" href="#2" shape="poly" coords="572,268,643,159,733,261,615,318" />
+                <area class="area" data-area="3" alt="" title="" href="#3" shape="poly" coords="505,118,505,251,569,267,640,157" />
+                <area class="area" data-area="4" alt="" title="" href="#4" shape="poly" coords="503,252,437,269,365,161,501,117" />
+                <area class="area" data-area="5" alt="" title="" href="#" shape="poly" coords="434,272,363,161,271,271,390,322" />
+                <area class="area" data-area="6" alt="" title="" href="#" shape="poly" coords="389,324,271,274,254,415,380,396" />
+                <area class="area" data-area="7" alt="" title="" href="#" shape="poly" coords="379,398,410,459,312,545,251,419" />
+                <area class="area" data-area="8" alt="" title="" href="#" shape="poly" coords="412,461,468,495,433,620,314,544" />
+                <area class="area" data-area="9" alt="" title="" href="#" shape="poly" coords="470,496,540,492,582,620,436,620" />
+                <area class="area" data-area="10" alt="" title="" href="#" shape="poly" coords="546,492,603,456,700,537,584,621" />
+                <area class="area" data-area="11" alt="" title="" href="#" shape="poly" coords="605,452,701,534,758,416,625,394" />
+            </map>
           </div>
         </section>
 
         <section class="growth">
-          <div class="image-wrapper">
+          <div class="image-wrapper animated hiding" data-animation="fadeIn">
             <img src="public/images/growth.png" alt="Gwarantujemy wzrost Twojej marki! Wzrost jakiego, pozazdrości konkurencja.">
           </div>
         </section>
 
         <section class="contact">
-          <a href="" class="btn-contact"></a>
+          <a href="" class="btn-contact animated hiding" data-animation="shake"></a>
         </section>
 
         <section class="warranty">
-          <h1>O gwarancji</h1>
+          <h1 class="animated hiding" data-animation="bounceIn">O gwarancji</h1>
 
           <div class="container">
             <div class="row">
               <div class="column col-xs-12 col-lg-4">
-                <div class="image-wrapper">
+                <div class="image-wrapper animated hiding" data-animation="flipInY">
                   <img src="public/images/warranty/warranty-1.png" alt="14">
                 </div>
                 <h3>Strategia wzrostu</h3>
                 <p>Przygotujemy dla Twojej marki strategię działania we wszystkich kanałach, która gwarantuje wzrost. Mamy w tym doświadczenie.</p>
               </div>
               <div class="column col-xs-12 col-lg-4">
-                <div class="image-wrapper">
+                <div class="image-wrapper animated hiding" data-animation="flipInY">
                   <img src="public/images/warranty/warranty-2.png" alt="200">
                 </div>
                 <h3>Uczciwe zasady</h3>
                 <p>Proponujemy uczciwe zasady, audyt środowiska marki, rekomendację budżetu, niezbędnych działań, harmonogramu kampanii oraz elastyczne umowy. </p>
               </div>
               <div class="column col-xs-12 col-lg-4">
-                <div class="image-wrapper">
+                <div class="image-wrapper animated hiding" data-animation="flipInY">
                   <img src="public/images/warranty/warranty-3.png" alt="600">
                 </div>
                 <h3>Dlaczego gwarancja</h3>
@@ -149,20 +159,20 @@
         </section>
 
         <section class="numbers">
-          <h1>O nas w liczbach</h1>
+          <h1 class="animated hiding" data-animation="bounceIn">O nas w liczbach</h1>
 
           <div class="container">
             <div class="row">
               <div class="column col-xs-12 col-lg-4">
-                <img src="public/images/numbers/number-14.png" alt="14">
+                <img src="public/images/numbers/number-14.png" alt="14" class="animated hiding" data-animation="fadeIn">
                 <p>Wiodcych marek w Polsce i za granicą</p>
               </div>
               <div class="column col-xs-12 col-lg-4">
-                <img src="public/images/numbers/number-200.png" alt="200">
+                <img src="public/images/numbers/number-200.png" alt="200" class="animated hiding" data-animation="fadeIn">
                 <p>Zadowolonych klientów polskich i zagranicznych</p>
               </div>
               <div class="column col-xs-12 col-lg-4">
-                <img src="public/images/numbers/number-600.png" alt="600">
+                <img src="public/images/numbers/number-600.png" alt="600" class="animated hiding" data-animation="fadeIn">
                 <p>Zrealizowanych projektów dla stałych partnerów</p>
               </div>
             </div>
@@ -170,19 +180,19 @@
         </section>
 
         <section class="clients">
-          <h1>Dla kogo pracujemy?</h1>
+          <h1 class="animated hiding" data-animation="bounceIn">Dla kogo pracujemy?</h1>
 
-          <div class="image-wrapper">
-            <img src="public/images/clients.jpg" alt="Food Care, Black, Frugo, 4move, Polpharma, NGine, Teekanne, Małpka Express, mPay, inPost, navi expert, MasterCard, Bracia Koral, Doctor Brew, citi, Baddura, SKOOK Krakowska, Oknoplast, czysto.pl, Rotunda, Taxxo, eBroker.pl, Galeria Katowicka, Software Waves">
+          <div class="image-wrapper animated hiding" data-animation="fadeIn"">
+            <img src="public/images/clients.jpg" alt="Food Care, Black, Frugo, 4move, NGine, Teekanne, Małpka Express, mPay, inPost, navi expert, MasterCard, Bracia Koral, Doctor Brew, Baddura, SKOOK Krakowska, Oknoplast, Taxxo, eBroker.pl, Galeria Katowicka, Software Waves">
           </div>
         </section>
 
         <section class="contact-us">
-          <h1>Skontaktuj się z nami</h1>
+          <h1 class="animated hiding" data-animation="bounceIn">Skontaktuj się z nami</h1>
 
           <p>Zaplanujemy dla Twojej marki strategię działań<br>i ZAGWARANTUJEMY jej wzrost!</p>
 
-          <form action="" method="post">
+          <form action="" method="post" class="mobile-hidden">
             <div class="container">
               <div class="row">
                 <div class="col-xs-12 col-lg-4 input-wrapper">
@@ -205,7 +215,7 @@
             </div>
           </form>
 
-          <p>lub napisz do nas na adres: <a href="mailto:kontakt@365agencja.pl" target="_blank">kontakt@365agencja.pl</a><br>albo zadzwoń: +48 537 997 537</p>
+          <p><span class="mobile-hidden">lub napisz do nas na adres: </span><a href="mailto:kontakt@365agencja.pl" target="_blank">kontakt@365agencja.pl</a><br><span class="mobile-hidden">albo zadzwoń: </span>+48 537 997 537</p>
         </section>
 
         <footer class="footer">
@@ -220,6 +230,7 @@ tel: +48 537 997 537, e-mail: <a href="mailto:kontakt@365agencja.pl" target="_bl
 
       <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
       <script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
+      <script src="public/js/jquery.appear.js"></script>
       <script src="public/js/scripts.js"></script>
   </body>
 </html>
